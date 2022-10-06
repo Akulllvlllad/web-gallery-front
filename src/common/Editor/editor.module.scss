@@ -1,0 +1,42 @@
+
+.editor {
+
+	width: 100%;
+	padding: 40px 5px;
+	:global {
+		.cm-s-easymde {
+			border: 0;
+			font-size: 20px;
+			
+		}
+		.editor-toolbar {
+			border: 0;
+			background-color: wheat;
+			.preview {
+				display: none;
+			}
+			.separator {
+				display: none;
+			}
+			.side-by-side{
+				display: none;
+			}
+			button {
+				color:forestgreen;
+				font-size: 22px;
+
+				&:hover {
+					border: none;
+					border-radius: 50%;
+				}
+			}
+		}
+		.CodeMirror {
+			color: black;
+			background-color: white;
+			font-size: 20px ;
+			
+		}
+	}
+}
+

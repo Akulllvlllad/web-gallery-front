@@ -1,12 +1,29 @@
-
 @import './variables.scss';
 @import './libs/normalize.scss';
 @import './components/all.scss';
 
-
-.wrapper{
-	overflow: hidden;
-	height: 100vh;
+.wrapper {
+	min-height: 100vh;
 	position: relative;
-	background-color: black;
+	display: flex;
+	flex-direction: column;
+	
+}
+h1 {
+	color: white;
+}
+
+.hidden {
+	display: none;
+}
+.slick-slider-promo {
+	height: 100vh;
+	overflow: hidden;
+}
+
+
+#tg{
+	background-color: rgb(31, 31, 31);
+	padding: 50px 20px;
+	border-radius: 20px;
 }

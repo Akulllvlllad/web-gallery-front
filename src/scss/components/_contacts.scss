@@ -1,0 +1,148 @@
+.contacts {
+	flex: 1 1 auto;
+	background-color: rgb(31, 31, 31);
+	&_inner {
+		padding: 260px 10px;
+		color: white;
+		display: flex;
+		flex-direction: column;
+		gap: 250px;
+	}
+	&_main {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		gap: 30px;
+	}
+	&_info {
+		display: flex;
+		flex-direction: column;
+		gap: 30px;
+	}
+}
+.info {
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+}
+.part {
+	h5 {
+		font-style: normal;
+		font-weight: 300;
+		font-size: 24px;
+		line-height: 28px;
+		color: #b1b0b0;
+	}
+	p {
+		font-style: normal;
+		font-weight: 400;
+		font-size: 24px;
+		line-height: 28px;
+		color: #edeaea;
+		max-width: 300px;
+	}
+	&_item {
+		width: 40px;
+		height: 40px;
+		svg {
+			fill: white;
+			width: 100%;
+			height: 100%;
+		}
+	}
+}
+
+.form {
+	display: flex;
+	gap: 10%;
+	flex-wrap: wrap;
+
+	&-submit {
+		box-sizing: border-box;
+margin-top: 50px;
+		width: 290px;
+		height: 70px;
+		
+
+		background: #f2f2f2;
+		border: 1px solid #f2f2f2;
+		font-style: normal;
+		font-weight: 300;
+		font-size: 24px;
+		line-height: 28px;
+		text-align: center;
+
+		
+		color: black;
+	}
+	&-comment {
+		flex-basis: 45%;
+		
+		
+	}
+	&-main {
+		flex-basis: 45%;
+		display: flex;
+		flex-direction: column;
+		gap: 40px;
+	}
+	&-field {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		p {
+			font-weight: 400;
+			font-size: 24px;
+			line-height: 28px;
+
+			color: #c7c4c4;
+		}
+		input {
+			width: 100%;
+			height: 73px;
+			left: 203px;
+			top: 849px;
+			background-color: inherit;
+			border: 1px solid #ffffff;
+			color: white;
+			padding: 0 24px;
+			font-weight: 300;
+			font-size: 20px;
+			line-height: 21px;
+		}
+	}
+	@media (max-width: 709px) {
+		gap: 50px;
+		&-comment {
+			flex-basis: 100%;
+		}
+		&-main {
+			flex-basis: 100%;
+			display: flex;
+			flex-direction: column;
+			gap: 40px;
+		}
+	}
+}
+
+
+.comment-field{
+	
+	input{
+		border: none;
+		
+	}
+}
+.comment-input{
+			width: 100%;
+			height: 397px;
+			left: 203px;
+			top: 849px;
+			background-color: inherit;
+			border: 1px solid #ffffff;
+			color: white;
+			padding: 0 24px;
+			font-weight: 300;
+			font-size: 20px;
+			line-height: 21px;
+}

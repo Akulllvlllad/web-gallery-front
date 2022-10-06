@@ -1,0 +1,21 @@
+.root{
+	display: flex;
+	justify-content: space-around;
+}
+
+.cardParent{
+	padding: 40px 40px 0 40px;
+	background-color: antiquewhite;
+	border-radius: 35px;
+	overflow: hidden;
+	height: 350px;
+	width: 220px;
+	div{
+		padding: 0;
+	}
+}
+
+.card{
+	background-color: grey;
+	
+}
