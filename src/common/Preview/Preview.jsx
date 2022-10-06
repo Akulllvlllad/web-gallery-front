@@ -2,10 +2,9 @@ import React from 'react'
 import styles from './preview.module.scss'
 import cn from 'classnames'
 
-export const Preview = ({
-	values,
-	setValues,
-}) => {
+export const Preview = ({ values, setValues }) => {
+
+
 	const addIMG = (name, i) => {
 		setValues(prev => ({
 			...prev,
@@ -15,8 +14,6 @@ export const Preview = ({
 				values.fileData.data.find(e => e.name === name),
 			],
 		}))
-
-		
 	}
 	const removeIMG = (name, i) => {
 		setValues(prev => ({
@@ -24,17 +21,66 @@ export const Preview = ({
 			current: prev.current.filter(e => e !== i),
 			titleIMG: prev.titleIMG.filter(e => e.name !== name),
 		}))
+	}
 
+	const [currentCard, setCurrentCard] = React.useState(null)
+	const dragStartHandler = (e, card) => {
 		
-		
+		setCurrentCard(card)
+	}
+	const dragEndHandler = e => {
+		e.target.style.background = 'white'
+	}
+	const dragOverHandler = e => {
+		e.preventDefault()
+		e.target.style.background = 'red'
 	}
 	
-	
+
+	const sortCard = (a, b) => {
+		if (a._id > b._id) {
+			return 1
+		} else {
+			return -1
+		}
+	}
+
+	const dropHandler = (e, card) => {
+		e.preventDefault()
+		
+		setValues(prev => ({
+			...prev,
+			fileData: { ...prev.fileData, data: prev.fileData.data.map(c => {
+			if(card._id === c._id){
+				return { ...c, _id: currentCard._id}
+			}
+			if (c._id === currentCard._id) {
+				return { ...c, _id: card._id }
+			}
+			return c
+
+		}) },
+		}))
+
+		e.target.style.background = 'white'
+	}
+
+	console.log(values)
+
 	return (
 		<div className={styles.root}>
 			{Boolean(values.fileData.data.length > 0) ? (
-				values.fileData.data.map((obj, i) => (
-					<div key={obj._id} className={styles.item}>
+				values.fileData.data.sort(sortCard).map((obj, i) => (
+					<div
+						draggable={true}
+						onDragStart={e => dragStartHandler(e, obj)}
+						onDragLeave={e => dragEndHandler(e)}
+						onDragEnd={e => dragEndHandler(e)}
+						onDragOver={e => dragOverHandler(e)}
+						onDrop={e => dropHandler(e, obj)}
+						key={obj.name}
+						className={styles.item}
+					>
 						{values.current.includes(i) ? (
 							<RemoveIMG
 								values={values}
