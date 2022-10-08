@@ -7,7 +7,7 @@ export const PromoBillet = () => {
 	const navigate = useNavigate()
 	return (
 		<div className={styles.root}>
-			<h1 className={styles.title}>Лучшее для лучших</h1>
+			<h1 className={styles.title}>Лучшее для лучших2</h1>
 			<div className={styles.buttons}>
 				<button onClick={() => navigate('/portfolio')} className={styles.button}>
 					Портфолио
