@@ -8,7 +8,7 @@ export const Promo = ({ setNull }) => {
 	React.useEffect(()=>{
 		setNull(false)
 		setHeader(false)
-		window.scrollTo(0, 20)
+		// window.scrollTo(0, 20)
 		return () => {
 			setNull(true)
 			setHeader(true)
