@@ -59,10 +59,9 @@
 
 	&-submit {
 		box-sizing: border-box;
-margin-top: 50px;
+		margin-top: 50px;
 		width: 290px;
 		height: 70px;
-		
 
 		background: #f2f2f2;
 		border: 1px solid #f2f2f2;
@@ -72,13 +71,10 @@ margin-top: 50px;
 		line-height: 28px;
 		text-align: center;
 
-		
 		color: black;
 	}
 	&-comment {
 		flex-basis: 45%;
-		
-		
 	}
 	&-main {
 		flex-basis: 45%;
@@ -90,7 +86,7 @@ margin-top: 50px;
 		display: flex;
 		flex-direction: column;
 		gap: 20px;
-		p {
+		label {
 			font-weight: 400;
 			font-size: 24px;
 			line-height: 28px;
@@ -100,8 +96,7 @@ margin-top: 50px;
 		input {
 			width: 100%;
 			height: 73px;
-			left: 203px;
-			top: 849px;
+
 			background-color: inherit;
 			border: 1px solid #ffffff;
 			color: white;
@@ -125,24 +120,64 @@ margin-top: 50px;
 	}
 }
 
-
-.comment-field{
-	
-	input{
+.comment-field {
+	input {
 		border: none;
-		
 	}
 }
-.comment-input{
-			width: 100%;
-			height: 397px;
-			left: 203px;
-			top: 849px;
-			background-color: inherit;
-			border: 1px solid #ffffff;
-			color: white;
-			padding: 0 24px;
-			font-weight: 300;
-			font-size: 20px;
-			line-height: 21px;
+.comment-input {
+	width: 100%;
+	height: 417px;
+
+	background-color: inherit;
+	border: 1px solid #ffffff;
+
+	padding: 25px 24px;
+	font-weight: 300;
+	font-size: 20px;
+	line-height: 21px;
+	overflow: hidden;
+
+	textarea {
+		min-height: 100%;
+		background-color: inherit;
+		color: white;
+		border: none;
+		width: 100%;
+	}
+}
+
+.form-service {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	label {
+		font-weight: 400;
+		font-size: 24px;
+		line-height: 28px;
+		color: #c7c4c4;
+	}
+	select {
+		background-color: rgb(31, 31, 31);
+		width: 100%;
+		border: 1px solid #ffffff;
+		color: white;
+		height: 55px;
+		padding: 0 40px;
+		font-size: 20px;
+	}
+}
+
+.form-field-errors {
+	position: absolute;
+	color: red;
+	font-size: 15px;
+}
+
+.errorForm {
+	input {
+		border-color: rgba(255, 0, 0, 0.545);
+		color: red;
+	}
+	
 }

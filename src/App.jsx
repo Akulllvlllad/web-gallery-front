@@ -12,6 +12,8 @@ import { Login } from './pages/Login';
 import { useActions } from './Hooks/useActions';
 
 import {Admin} from './pages/Admin'
+import { Information } from './pages/Information';
+import { Services } from './pages/Services';
 
 function App() {
 	const [isNull, setNull] = React.useState(true)
@@ -26,8 +28,10 @@ function App() {
 				<Route path='/' element={<Promo setNull={setNull} />} />
 				<Route path='/portfolio' element={<Gallery />} />
 				<Route path='/contacts' element={<Contacts />} />
-				<Route path='/services' element={<h1>services</h1>} />
-				<Route path='/auth/login' element={<Login/>} />
+				<Route path='/services' element={<Services/>} />
+				<Route path='/info' element={<Information/>} />
+
+				<Route path='/auth/login' element={<Login />} />
 				<Route path='/admin' element={<Admin />} />
 				<Route path='/portfolio/:id' element={<OnePortfolio />} />
 			</Routes>

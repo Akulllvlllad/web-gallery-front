@@ -7,14 +7,12 @@ import { useSelector } from 'react-redux'
 import { selectAuth } from '../../store/slices/authSlice'
 import { useActions } from '../../Hooks/useActions'
 
-const URL = 'http://localhost:5000'
+const URL = 'https://galleryappkrsc.herokuapp.com'
 const Links = '/portfolio/'
 
 function getRandomInt(min, max) {
 	return Math.floor(Math.random() * (max - min)) + min
 }
-
-
 
 export const Card_Gallery = ({ _id, title, titleIMG, text }) => {
 	const isAuth = useSelector(selectAuth)
@@ -48,7 +46,9 @@ export const Card_Gallery = ({ _id, title, titleIMG, text }) => {
 						</Slider>
 						<figcaption className={styles.figcaption}>
 							<h2 className={styles.title}>{title}</h2>
-							<p className={styles.text}>{text}</p>
+							<button className={styles.button}>
+								Посмотреть все фотографии
+							</button>
 						</figcaption>
 					</Link>
 

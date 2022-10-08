@@ -32,7 +32,7 @@ export const Admin = () => {
 			formData.append('images', file[i])
 		}
 
-		fetch('http://localhost:5000/multiple', {
+		fetch('https://galleryappkrsc.herokuapp.com/multiple', {
 			method: 'POST',
 			body: formData,
 		})
@@ -48,7 +48,6 @@ export const Admin = () => {
 			})
 	}
 
-	
 	const { fetchCreate } = useActions()
 	const onSubmit = () => {
 		if (block) {
@@ -69,16 +68,9 @@ export const Admin = () => {
 
 	const [open, setOpen] = React.useState(false)
 
-
-
-
-
-
-
-
 	if (open) {
 		return (
-			<div className='Admin' id="top">
+			<div className='Admin' id='top'>
 				<div className='Admin_container _container'>
 					<div className='setPreview'>
 						<div className='setPreview_container'>
@@ -87,11 +79,12 @@ export const Admin = () => {
 									sets: values.set,
 									images: values.fileData.data,
 									text: values.text,
+									title: values.titleData,
 								}}
 							/>
 						</div>
 						<div className='Admin-submit'>
-							<PreviewButton setOpen={setOpen} open={open}/>
+							<PreviewButton setOpen={setOpen} open={open} />
 						</div>
 					</div>
 				</div>
@@ -102,7 +95,6 @@ export const Admin = () => {
 	return (
 		<div className='Admin'>
 			<div className='Admin_container _container'>
-
 				{/* {true && <LinerLoading />} */}
 				<div className='Admin_title'>Панель для добавления фотосессии</div>
 				<div className='Admin_body'>
@@ -168,9 +160,10 @@ const Downloader = ({ values, setValues, onSubmitHandler }) => {
 						setValues(prev => ({
 							...prev,
 							current: [],
-							titleIMG: []
+							titleIMG: [],
 						}))
-						filesRef.current.click()}}
+						filesRef.current.click()
+					}}
 					className='upload_btn _btn'
 				>
 					Загрузить фотографии

@@ -1,10 +1,10 @@
 import React from 'react'
 import styles from './sets.module.scss'
 import cn from 'classnames'
-
+import { TextSets } from '../textSets/TextSets'
 
 export const SetOne = ({ images, text }) => {
-	const baseURL = 'http://localhost:5000'
+	const baseURL = 'https://galleryappkrsc.herokuapp.com'
 	console.log(images)
 	return (
 		<div className={styles.root}>
@@ -39,7 +39,6 @@ export const SetOne = ({ images, text }) => {
 				<div className={cn(styles.grid, styles.child_10)}>
 					<img src={baseURL + images[9].path} alt='' />
 				</div>
-				
 			</div>
 		</div>
 	)

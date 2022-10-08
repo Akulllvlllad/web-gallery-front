@@ -2,9 +2,8 @@ import React from 'react'
 import styles from './sets.module.scss'
 import cn from 'classnames'
 
-
 export const SetTwo = ({ images, text }) => {
-	const baseURL = 'http://localhost:5000'
+	const baseURL = 'https://galleryappkrsc.herokuapp.com'
 	console.log(images)
 	return (
 		<div className={styles.root}>

@@ -11,7 +11,7 @@ export const Footer = ({ isNull }) => {
 	if (isNull)
 		return (
 			<footer className={styles.footer}>
-				<div className='_container'>
+				<div className='footer_container'>
 					<div className={styles.inner}>
 						<Link to='/auth/login'>
 							<p className={styles.text}>

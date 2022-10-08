@@ -71,6 +71,9 @@
 	align-items: center;
 	gap: 50px;
 	padding: 0px 40px;
+	li{
+		list-style-type: none; 
+	}
 }
 
 .item {

@@ -35,9 +35,9 @@ export const BurgerList = React.memo(
 		burgerRef,
 		listRef,
 		opening,
-		nav = ['Портфолио', 'Контакты', 'Услуги'],
+		nav = ['Портфолио', 'Контакты', 'Услуги', 'Информация'],
 		setOpening,
-		links = ['portfolio', 'contacts', 'services'],
+		links = ['portfolio', 'contacts', 'services', 'info'],
 	}) => {
 		const navigate = useNavigate()
 		const {logout} = useActions()

@@ -3,8 +3,6 @@ import styles from './preview.module.scss'
 import cn from 'classnames'
 
 export const Preview = ({ values, setValues }) => {
-
-
 	const addIMG = (name, i) => {
 		setValues(prev => ({
 			...prev,
@@ -25,7 +23,6 @@ export const Preview = ({ values, setValues }) => {
 
 	const [currentCard, setCurrentCard] = React.useState(null)
 	const dragStartHandler = (e, card) => {
-		
 		setCurrentCard(card)
 	}
 	const dragEndHandler = e => {
@@ -35,7 +32,6 @@ export const Preview = ({ values, setValues }) => {
 		e.preventDefault()
 		e.target.style.background = 'red'
 	}
-	
 
 	const sortCard = (a, b) => {
 		if (a._id > b._id) {
@@ -47,19 +43,21 @@ export const Preview = ({ values, setValues }) => {
 
 	const dropHandler = (e, card) => {
 		e.preventDefault()
-		
+
 		setValues(prev => ({
 			...prev,
-			fileData: { ...prev.fileData, data: prev.fileData.data.map(c => {
-			if(card._id === c._id){
-				return { ...c, _id: currentCard._id}
-			}
-			if (c._id === currentCard._id) {
-				return { ...c, _id: card._id }
-			}
-			return c
-
-		}) },
+			fileData: {
+				...prev.fileData,
+				data: prev.fileData.data.map(c => {
+					if (card._id === c._id) {
+						return { ...c, _id: currentCard._id }
+					}
+					if (c._id === currentCard._id) {
+						return { ...c, _id: card._id }
+					}
+					return c
+				}),
+			},
 		}))
 
 		e.target.style.background = 'white'
@@ -108,7 +106,7 @@ const RemoveIMG = ({ values, removeIMG, i, obj }) => {
 				currentING: values.current.includes(i),
 			})}
 		>
-			<img src={`http://localhost:5000${obj.path}`} />
+			<img src={`https://galleryappkrsc.herokuapp.com${obj.path}`} />
 			<div className='currentING-deleteIcon'>
 				<span>+</span>
 			</div>
@@ -125,7 +123,7 @@ const AddIMG = ({ values, addIMG, i, obj }) => {
 				currentING: values.current.includes(i),
 			})}
 		>
-			<img src={`http://localhost:5000${obj.path}`} />
+			<img src={`https://galleryappkrsc.herokuapp.com${obj.path}`} />
 			<p className={styles.size}>{obj.size}</p>
 		</div>
 	)

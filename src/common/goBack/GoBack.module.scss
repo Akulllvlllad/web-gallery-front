@@ -11,6 +11,11 @@
 	position: absolute;
 	left: 50px;
 	bottom: 50px;
+	@media(max-width: 1439px){
+		left: 20px;
+		bottom: 20px;
+		position: relative;
+	}
 	span{
 		transform: translate(0, -10%);
 		font-size: 26px;
@@ -22,4 +27,5 @@
         from {transform: translate(5%, -10%);}
         to {transform: translate(-5%, -10%);}
     }
+
 
