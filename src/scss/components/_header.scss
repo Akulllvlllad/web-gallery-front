@@ -1,7 +1,6 @@
 @import '../variables.scss';
 
-
-.header{
+.header {
 	left: 0;
 	top: 0;
 	position: fixed;
@@ -9,51 +8,43 @@
 	width: 100%;
 	padding: 20px 0;
 	background: rgba(0, 0, 0, 0.4);
-	&_container{
+	&_container {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		padding: 0 10px;
-		
 	}
-	.logo{
-		
+	.logo {
 		cursor: pointer;
 		color: rgb(255, 255, 255);
-		
-		
-	
+		 user-select: none;  
 		font-weight: 900;
 		letter-spacing: 2px;
-		text-shadow: rgb(0, 0, 0) -2px 0,
-		rgb(0, 0, 0) 2px 0;
-		h1{
+
+		h1 {
 			font-family: bitter;
 			font-weight: 400;
 			font-size: 34px;
-			@media(max-width: 710px){
+			@media (max-width: 710px) {
 				font-size: 30px;
 			}
-			@media(max-width: 610px){
+			@media (max-width: 610px) {
 				font-size: 26px;
 			}
-			@media(max-width: 510px){
+			@media (max-width: 510px) {
 				font-size: 22px;
 			}
-			@media(max-width: 410px){
+			@media (max-width: 410px) {
 				font-size: 20px;
 			}
-			
 		}
 	}
 }
 
-.noPromo{
-		
-		background-color: rgb(0, 0, 0);
-		h1{
-			font-size: 36px;
-			font-family: 'Sacramento', cursive;
-			
-		}
+.noPromo {
+	background-color: rgb(0, 0, 0);
+	h1 {
+		font-size: 36px;
+		font-family: 'Sacramento', cursive;
+	}
 }

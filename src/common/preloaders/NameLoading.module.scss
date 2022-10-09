@@ -18,8 +18,9 @@
 	
 }
 .title {
+	transform: translate(0, -30px);
 	font-size: 30px;
-	
+	user-select: none;
 	letter-spacing: 4px;
 	color: rgb(4, 4, 4);
 	font-family: bitter;

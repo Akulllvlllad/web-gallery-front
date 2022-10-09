@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { Burger, BurgerList } from '../../common/Burger/Burger'
 import { Contacts } from '../../common/contacts/Contacts'
-import { selectSetDark } from '../../store/slices/setSlice'
+
 import cn from 'classnames'
 import { selectHeader } from '../../store/slices/appStateSlice'
 
