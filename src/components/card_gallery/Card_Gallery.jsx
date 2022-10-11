@@ -7,7 +7,7 @@ import { useSelector } from 'react-redux'
 import { selectAuth } from '../../store/slices/authSlice'
 import { useActions } from '../../Hooks/useActions'
 
-const URL = 'https://galleryappkrsc.herokuapp.com'
+const URL = 'http://95.188.91.140:25565'
 const Links = '/portfolio/'
 
 function getRandomInt(min, max) {

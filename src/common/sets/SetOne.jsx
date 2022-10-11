@@ -4,7 +4,7 @@ import cn from 'classnames'
 import { TextSets } from '../textSets/TextSets'
 
 export const SetOne = ({ images, text }) => {
-	const baseURL = 'https://galleryappkrsc.herokuapp.com'
+	const baseURL = 'http://95.188.91.140:25565'
 	console.log(images)
 	return (
 		<div className={styles.root}>

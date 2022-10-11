@@ -32,7 +32,7 @@ export const Admin = () => {
 			formData.append('images', file[i])
 		}
 
-		fetch('https://galleryappkrsc.herokuapp.com/multiple', {
+		fetch(`${'http://95.188.91.140:25565'}/multiple`, {
 			method: 'POST',
 			body: formData,
 		})

@@ -106,7 +106,7 @@ const RemoveIMG = ({ values, removeIMG, i, obj }) => {
 				currentING: values.current.includes(i),
 			})}
 		>
-			<img src={`https://galleryappkrsc.herokuapp.com${obj.path}`} />
+			<img src={`${'http://95.188.91.140:25565'}${obj.path}`} />
 			<div className='currentING-deleteIcon'>
 				<span>+</span>
 			</div>
@@ -123,7 +123,7 @@ const AddIMG = ({ values, addIMG, i, obj }) => {
 				currentING: values.current.includes(i),
 			})}
 		>
-			<img src={`https://galleryappkrsc.herokuapp.com${obj.path}`} />
+			<img src={`${'http://95.188.91.140:25565'}${obj.path}`} />
 			<p className={styles.size}>{obj.size}</p>
 		</div>
 	)

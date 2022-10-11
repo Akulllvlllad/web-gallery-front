@@ -19,3 +19,16 @@
 	background-color: grey;
 	
 }
+
+
+@media(max-width: 733px){
+	.cardParent{
+	padding: 5px 5px;
+
+	border-radius: 0px;
+	
+	height: 250px;
+	width: 90px;
+	
+}
+}

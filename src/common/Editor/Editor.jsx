@@ -35,6 +35,7 @@ export const Editor = ({  values, setValues }) => {
 			value={values.text}
 			options={options}
 			onChange={onChange}
+			
 		/>
 	)
 }
