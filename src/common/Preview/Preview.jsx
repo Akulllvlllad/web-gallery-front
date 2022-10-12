@@ -106,7 +106,7 @@ const RemoveIMG = ({ values, removeIMG, i, obj }) => {
 				currentING: values.current.includes(i),
 			})}
 		>
-			<img src={`${'http://95.188.91.140:25565'}${obj.path}`} />
+			<img src={`${'https://192.168.0.6:3001'}${obj.path}`} />
 			<div className='currentING-deleteIcon'>
 				<span>+</span>
 			</div>
@@ -123,7 +123,7 @@ const AddIMG = ({ values, addIMG, i, obj }) => {
 				currentING: values.current.includes(i),
 			})}
 		>
-			<img src={`${'http://95.188.91.140:25565'}${obj.path}`} />
+			<img src={`${'https://192.168.0.6:3001'}${obj.path}`} />
 			<p className={styles.size}>{obj.size}</p>
 		</div>
 	)
