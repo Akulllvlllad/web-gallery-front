@@ -32,7 +32,7 @@ export const Admin = () => {
 			formData.append('images', file[i])
 		}
 
-		fetch(`${'https://192.168.0.6:3001'}/multiple`, {
+		fetch(`${'https://95.188.91.140:3001'}/multiple`, {
 			method: 'POST',
 			body: formData,
 		})

@@ -16,7 +16,7 @@ import { Information } from './pages/Information'
 import { Services } from './pages/Services'
 
 function App() {
-	console.log('https://192.168.0.6:3001')
+	console.log('https://95.188.91.140:3001')
 	const [isNull, setNull] = React.useState(true)
 	const { fetchMe } = useActions()
 	React.useEffect(() => {

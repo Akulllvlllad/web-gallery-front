@@ -3,7 +3,7 @@ import styles from './sets.module.scss'
 import cn from 'classnames'
 
 export const SetTwo = ({ images, text }) => {
-	const baseURL = 'https://192.168.0.6:3001'
+	const baseURL = 'https://95.188.91.140:3001'
 	console.log(images)
 	return (
 		<div className={styles.root}>

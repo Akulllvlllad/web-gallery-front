@@ -7,7 +7,7 @@ import { useSelector } from 'react-redux'
 import { selectAuth } from '../../store/slices/authSlice'
 import { useActions } from '../../Hooks/useActions'
 
-const URL = 'https://192.168.0.6:3001'
+const URL = 'https://95.188.91.140:3001'
 const Links = '/portfolio/'
 
 function getRandomInt(min, max) {
